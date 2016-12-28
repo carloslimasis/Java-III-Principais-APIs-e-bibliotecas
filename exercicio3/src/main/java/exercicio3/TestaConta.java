@@ -23,6 +23,16 @@ public class TestaConta {
 		conta4.setNumero(12345);
 		
 		System.out.println(conta3.equals(conta4));
+		
+		Conta contaComNome1 = new ContaCorrente();
+		contaComNome1.setNome("teste");
+		contaComNome1.setNumero(12345);
+		
+		Conta contaComNome2 = new ContaCorrente();
+		contaComNome2.setNome("teste");
+		contaComNome2.setNumero(12345);
+		
+		System.out.println(contaComNome1.equals(contaComNome2));
 	}
 
 }

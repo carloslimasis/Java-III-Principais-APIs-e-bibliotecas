@@ -7,17 +7,26 @@ package exercicio3;
  */
 public abstract class Conta {
 
+	protected String nome;
 	protected int numero;
 	protected double saldo;
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
 
 	public double getSaldo() {
 		return this.saldo;
 	}
-	
+
 	public int getNumero() {
 		return this.numero;
 	}
-	
+
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
@@ -49,7 +58,15 @@ public abstract class Conta {
 
 	public boolean equals(Object obj) {
 		Conta outraConta = (Conta) obj;
-
-		return this.numero == outraConta.numero;
+		
+		boolean equals = false;
+		
+		if(this.nome != null) {
+			equals = this.nome.equals(outraConta.getNome());
+		}
+		
+		equals = this.numero == outraConta.numero;
+		
+		return equals;
 	}
 }
