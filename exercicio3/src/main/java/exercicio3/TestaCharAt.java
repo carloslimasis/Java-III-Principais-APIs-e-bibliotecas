@@ -24,3 +24,17 @@ class TestaReverseCharAt {
 		System.out.println(textoAoContrario);
 	}
 }
+
+class TestaSplit {
+	public static void main(String[] args) {
+		String[] partesString = "Socorram-me, subi no ônibus em Marrocos".split(" ");
+		String textoAoContrario = "";
+		
+		int posicao = partesString.length;
+		while (posicao != 0) {
+			textoAoContrario += (partesString[--posicao] + " ");
+		}
+		
+		System.out.println(textoAoContrario);
+	}
+}
